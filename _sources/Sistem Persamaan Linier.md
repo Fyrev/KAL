@@ -47,7 +47,9 @@ Contoh Sistem Persamaan Linear dengan Solusi Tunggal, Banyak, dan Tidak Ada Solu
 
 
 2x+y−z=3
+
 x−y+2z=4
+
 3x+y+z=5
 ​
 Berikut adalah contoh sistem persamaan linear dengan **solusi tunggal, banyak, dan tidak ada solusi**.
@@ -58,7 +60,9 @@ Berikut adalah contoh sistem persamaan linear dengan **solusi tunggal, banyak, d
 Sistem memiliki solusi tunggal jika memiliki jumlah persamaan yang cukup dan semua barisnya **tidak saling bertentangan**.
 
 2x+y−z=3
+
 x−y+2z=4
+
 3x+y+z=5
 
 
@@ -66,7 +70,9 @@ x−y+2z=4
 Eliminasi Gauss :
 
 2 1 -1 | 3
+
 1 -1 2 | 4
+
 3 1 1  | 5
 
 
@@ -79,7 +85,9 @@ Kesimpulan: Sistem ini memiliki solusi unik karena setelah eliminasi, diperoleh 
 Sistem memiliki tak hingga banyak solusi jika terdapat baris yang menjadi nol seluruhnya, menunjukkan adanya variabel bebas.
 
 x+y+z=4
+
 2x+2y+2z=8
+
 3x+3y+3z=12
 ​​
  
@@ -92,7 +100,9 @@ Bentuk matriks augmented:
 ​
   
 1 1 1 ∣ 4
+
 2 2 2 ∣ 8
+
 3 3 3 ∣ 12
 ​
 
@@ -100,7 +110,9 @@ Bentuk matriks augmented:
 Kurangkan baris kedua dengan 2 × baris pertama, dan baris ketiga dengan 3 × baris pertama:
 
 1 1 1 | 1
+
 0 0 0 | 0
+
 0 0 0 | 2
 
 Baris kedua dan ketiga menjadi nol, artinya hanya ada satu persamaan dengan tiga variabel, sehingga sistem memiliki tak hingga banyak solusi.
@@ -115,11 +127,13 @@ x=4−y−z
 
 
  3. **Sistem Tanpa Solusi**
- 
+
 Sistem tidak memiliki solusi jika terjadi kontradiksi saat eliminasi, misalnya dua persamaan bertentangan.
 
 x+y+z     =1
+
 2x+2y+2z  =2
+
 x+y+z     =3
 ​
   ​
@@ -131,7 +145,9 @@ Bentuk matriks augmented:
 
 
 1  1  1  | 1 
+
 2  2  2  | 2 
+
 1  1  1  | 3
 
 
@@ -140,7 +156,9 @@ Kurangkan baris kedua dengan 2 × baris pertama, dan baris ketiga dengan baris p
 
 
 1  1  1  | 1 
+
 0  0  0  | 0 
+
 0  0  0  | 2
 
 
