@@ -3,12 +3,34 @@ title: Sistem Persamaan Linier
 
 ---
 
-# Sistem Persamaan Linier
+
+# Sistem Persamaan linier
+
 Sistem persamaan linear adalah kumpulan persamaan linear yang terdiri dari beberapa variabel. Sistem persamaan linear merupakan salah satu materi dalam ilmu matematika. 
 
 berikut adalah materi" yang saya akan lampirkan :
 
-# Sistem Persamaan linier
+Sistem Persamaan Linear (SPL)
+
+Definisi:
+
+Sistem Persamaan Linear (SPL) adalah kumpulan dua atau lebih persamaan linear yang memiliki satu atau lebih variabel.
+
+**Jenis-Jenis SPL**
+
+Berdasarkan jumlah solusi, SPL dapat dikategorikan menjadi tiga jenis:
+
+SPL dengan Solusi Tunggal (Konsisten dan Determinan ≠ 0)
+Sistem memiliki satu solusi unik, artinya ada satu nilai untuk setiap variabel yang memenuhi semua persamaan.
+
+SPL dengan Tak Hingga Banyak Solusi (Konsisten, tetapi Dependensi Linier)
+Sistem memiliki lebih dari satu solusi karena ada variabel bebas yang dapat bernilai sembarang.
+
+SPL Tanpa Solusi (Inkonsisten)
+Sistem tidak memiliki solusi karena terdapat kontradiksi dalam persamaan.
+
+
+
 
 ## Definisi Sistem Persamaan Linier
 
@@ -17,7 +39,8 @@ berikut adalah materi" yang saya akan lampirkan :
 ### Eliminasi
 
 ### Eliminasi Gaus
-Definisi Eliminasi Gauss
+**Definisi Eliminasi Gauss**
+
 Eliminasi Gauss adalah proses mengubah matriks augmented (matriks koefisien yang diperluas dengan vektor konstanta) dari sistem persamaan linear menjadi bentuk eselon baris atau eselon baris tereduksi menggunakan operasi baris elementer, sehingga solusi sistem dapat ditentukan.
 
 Contoh Sistem Persamaan Linear dengan Solusi Tunggal, Banyak, dan Tidak Ada Solusi:
@@ -31,7 +54,7 @@ Berikut adalah contoh sistem persamaan linear dengan **solusi tunggal, banyak, d
 
 
 
-1. Sistem dengan Solusi Tunggal
+1. **Sistem dengan Solusi Tunggal**
 Sistem memiliki solusi tunggal jika memiliki jumlah persamaan yang cukup dan semua barisnya **tidak saling bertentangan**.
 
 2x+y−z=3
@@ -51,7 +74,8 @@ Kesimpulan: Sistem ini memiliki solusi unik karena setelah eliminasi, diperoleh 
 
 ---
 
-2. Sistem dengan Banyak Solusi (Tak Hingga Solusi) 
+2. **Sistem dengan Banyak (Solusi Tak Hingga Solusi)**
+
 Sistem memiliki tak hingga banyak solusi jika terdapat baris yang menjadi nol seluruhnya, menunjukkan adanya variabel bebas.
 
 x+y+z=4
@@ -90,7 +114,8 @@ x=4−y−z
 
 
 
- 3. Sistem Tanpa Solusi
+ 3. **Sistem Tanpa Solusi**
+ 
 Sistem tidak memiliki solusi jika terjadi kontradiksi saat eliminasi, misalnya dua persamaan bertentangan.
 
 x+y+z     =1
