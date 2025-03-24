@@ -379,6 +379,12 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-sistem-persamaan-linier">Definisi Sistem Persamaan Linier</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-persamaan-linier">Solusi Persamaan Linier</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-sistem-persamaan-linier">penyelesaian sistem persamaan linier</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-1"><strong>Soal 1:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-2"><strong>Soal 2:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-3"><strong>Soal 3:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-4"><strong>Soal 4:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-baris-elementer">operasi baris elementer</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi">Eliminasi</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gaus">Eliminasi Gaus</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-grafik">Solusi Grafik</a></li>
@@ -415,6 +421,195 @@ Sistem tidak memiliki solusi karena terdapat kontradiksi dalam persamaan.</p>
 </section>
 <section id="solusi-persamaan-linier">
 <h2>Solusi Persamaan Linier<a class="headerlink" href="#solusi-persamaan-linier" title="Link to this heading">#</a></h2>
+<section id="penyelesaian-sistem-persamaan-linier">
+<h3>penyelesaian sistem persamaan linier<a class="headerlink" href="#penyelesaian-sistem-persamaan-linier" title="Link to this heading">#</a></h3>
+<p>Mari kita selesaikan setiap sistem persamaan linier menggunakan <strong>Operasi Baris Elementer (OBE)</strong> dan periksa apakah sistem memiliki solusi unik, tak hingga solusi, atau tidak ada solusi.</p>
+</section>
+<hr class="docutils" />
+<section id="soal-1">
+<h3><strong>Soal 1:</strong><a class="headerlink" href="#soal-1" title="Link to this heading">#</a></h3>
+<p>x1 + 2x2 +3x3 = 6
+​</p>
+<p>2x1 + 4x2 + 6x3 = 12
+​</p>
+<p>x3 − x2 = 2
+​</p>
+<p>​</p>
+<p>​</p>
+<p><strong>Matriks Augmented:</strong></p>
+<p>[
+1  2  3  |6
+2  4  6  |12
+0  -1  1  |2
+]</p>
+<ul class="simple">
+<li><p>Baris 2 dikurangi 2 kali Baris 1:</p></li>
+</ul>
+<p>[
+1  2  3  |6
+0  0  0  |0
+0  -1  1  |2
+]</p>
+<ul class="simple">
+<li><p>Karena Baris 2 semuanya nol (tidak berkontribusi ke solusi), kita eliminasi:</p></li>
+</ul>
+<p>[
+1  2  3  |6
+0  -1  1  |2
+]</p>
+<ul class="simple">
+<li><p>Substitusi dari baris terakhir:  x3 = x2 + 2</p></li>
+<li><p>Substitusi ke baris pertama:</p></li>
+</ul>
+<p>x1 + 2x2 + 3(x2 + 2) = 6</p>
+<p>x1 + 2x2 + 3x2 + 6 = 6</p>
+<p>x1 + 5x2 = 0</p>
+<p><strong>Solusi Umum:</strong></p>
+<p>x1 = -5t,  x2 = t,  x3 = t + 2</p>
+<p><strong>Kesimpulan:</strong> Tak hingga solusi (satu variabel bebas,  t ).</p>
+</section>
+<hr class="docutils" />
+<section id="soal-2">
+<h3><strong>Soal 2:</strong><a class="headerlink" href="#soal-2" title="Link to this heading">#</a></h3>
+<p>[
+x1 + x2 + x3 = 3
+2x1 + x3 = 5
+x1 + 2x2 = 3
+]</p>
+<p><strong>Matriks Augmented:</strong></p>
+<p>[
+1  1  1  |3
+2  0  1  |5
+1  2  0  |3
+]</p>
+<ul class="simple">
+<li><p>Baris 2 dikurangi 2 kali Baris 1:</p></li>
+</ul>
+<p>[
+1  1  1  |3
+0  -2  -1  |-1
+1  2  0  |3
+]</p>
+<ul class="simple">
+<li><p>Baris 3 dikurangi Baris 1:
+[
+1  1  1  |3
+0  -2  -1  |-1
+0  1  -1  |0
+]</p></li>
+<li><p>Baris 3 ditambah  1/2  Baris 2:</p></li>
+</ul>
+<p>[
+1  1  1  |3
+0  -2  -1  |-1
+0  0  3/2 &amp; |-1/2
+]</p>
+<ul class="simple">
+<li><p>Dari baris terakhir,  x3 = 1/3</p></li>
+<li><p>Substitusi ke baris 2:</p></li>
+</ul>
+<p>-2x2 - x3 = -1</p>
+<p>-2x2 - 1/3 = -1</p>
+<p>-2x2 = -2/3</p>
+<p>x2 = 1/3</p>
+<ul class="simple">
+<li><p>Substitusi ke baris pertama:</p></li>
+</ul>
+<p>x1 + 1/3 + 1/3 = 3</p>
+<p>x1 = 3 - 2/3 = 7/3</p>
+<p><strong>Solusi Unik:</strong>  x1 = 7/3, x2 = 1/3, x3 = 1/3 .</p>
+</section>
+<hr class="docutils" />
+<section id="soal-3">
+<h3><strong>Soal 3:</strong><a class="headerlink" href="#soal-3" title="Link to this heading">#</a></h3>
+<p>[
+2x1 + 2x2 = 4
+x1 + x2 = 2
+]</p>
+<p><strong>Matriks Augmented:</strong></p>
+<p>[
+2  2  |4
+1  1  |2
+]</p>
+<ul class="simple">
+<li><p>Baris 1 dikurangi 2 kali Baris 2:
+[
+1  1  |2
+0  0  |0
+]</p></li>
+<li><p>x1 + x2 = 2 &gt; x2 = t, x1 = 2 - t</p></li>
+</ul>
+<p><strong>Solusi Umum:</strong>  x1 = 2 - t, x2 = t  (tak hingga solusi).</p>
+</section>
+<hr class="docutils" />
+<section id="soal-4">
+<h3><strong>Soal 4:</strong><a class="headerlink" href="#soal-4" title="Link to this heading">#</a></h3>
+<p>[
+x1 + x2 = 5
+x1 + x3 = 6
+]</p>
+<p><strong>Matriks Augmented:</strong>
+[</p>
+<p>1  1  0  |5
+1  0  1  |6
+]</p>
+<ul class="simple">
+<li><p>Baris 2 dikurangi Baris 1:</p></li>
+</ul>
+<p>[
+1  1  0  |5
+0 -1  1  |1
+]</p>
+<ul class="simple">
+<li><p>Dari baris kedua,  x3 = x2 + 1</p></li>
+<li><p>Dari baris pertama,  x1 = 5 - x2</p></li>
+</ul>
+<p><strong>Solusi Umum:</strong>  x1 = 5 - t, x2 = t, x3 = t + 1  (tak hingga solusi).</p>
+<hr class="docutils" />
+<p><strong>Kesimpulan:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Soal</p></th>
+<th class="head"><p>Jenis Solusi</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Soal 1</p></td>
+<td><p>Tak hingga solusi</p></td>
+</tr>
+<tr class="row-odd"><td><p>Soal 2</p></td>
+<td><p>Solusi unik</p></td>
+</tr>
+<tr class="row-even"><td><p>Soal 3</p></td>
+<td><p>Tak hingga solusi</p></td>
+</tr>
+<tr class="row-odd"><td><p>Soal 4</p></td>
+<td><p>Tak hingga solusi</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="operasi-baris-elementer">
+<h3>operasi baris elementer<a class="headerlink" href="#operasi-baris-elementer" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Jenis-Jenis Operasi Baris Elementer
+OBE terdiri dari tiga jenis operasi dasar:</p></li>
+</ol>
+<p>Pertukaran Baris (Ri ↔ Rj)</p>
+<p>Menukar posisi dua baris dalam matriks.</p>
+<p>Contoh: Tukar Baris 1 dan Baris 2</p>
+<p>R1↔R2</p>
+<p>Perkalian Baris dengan Skalar (k ≠ 0)</p>
+<p>Mengalikan satu baris dengan konstanta tak nol.</p>
+<p>Contoh: Kalikan Baris 2 dengan</p>
+<p>𝑅2→1/2𝑅2</p>
+<p>​Penjumlahan atau Pengurangan Baris</p>
+<p>Menambahkan atau mengurangi kelipatan suatu baris ke baris lain.</p>
+<p>Contoh: Baris 2 dikurangi 2 kali Baris 1</p>
+<p>𝑅2→𝑅2 − 2𝑅1</p>
+<p>​</p>
+</section>
 <section id="eliminasi">
 <h3>Eliminasi<a class="headerlink" href="#eliminasi" title="Link to this heading">#</a></h3>
 </section>
@@ -557,6 +752,12 @@ Sistem memiliki solusi tunggal jika memiliki jumlah persamaan yang cukup dan sem
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-sistem-persamaan-linier">Definisi Sistem Persamaan Linier</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-persamaan-linier">Solusi Persamaan Linier</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-sistem-persamaan-linier">penyelesaian sistem persamaan linier</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-1"><strong>Soal 1:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-2"><strong>Soal 2:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-3"><strong>Soal 3:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-4"><strong>Soal 4:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-baris-elementer">operasi baris elementer</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi">Eliminasi</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gaus">Eliminasi Gaus</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-grafik">Solusi Grafik</a></li>
