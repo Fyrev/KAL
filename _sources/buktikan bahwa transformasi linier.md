@@ -1,44 +1,39 @@
-**Transformasi Linier dan Buktinya**
+### Bukti Transformasi Linier
 
-Transformasi linier adalah fungsi yang mengubah satu vektor ke vektor lain dengan memenuhi dua sifat dasar: 
+**Definisi Transformasi Linier:**
+Transformasi T: R² → R² adalah linier jika berlaku:
+1. T(v + w) = T(v) + T(w) untuk semua v, w ∈ R²
+2. T(cv) = cT(v) untuk semua v ∈ R² dan c ∈ R
 
-1. **Additivitas**: \( T(u + v) = T(u) + T(v) \) untuk setiap vektor \( u \) dan \( v \).
-2. **Homogenitas**: \( T(cu) = cT(u) \) untuk setiap skalar \( c \) dan vektor \( u \).
+**Matriks untuk Rotasi:**
+Transformasi rotasi dinyatakan dengan matriks A:
+A = [ cosθ  -sinθ ]
+       [ sinθ   cosθ ]
 
-Dalam konteks rotasi di \( \mathbb{R}^2 \), kita menggunakan matriks:
+**Langkah 1: Verifikasi Penjumlahan**
+- Ambil dua vektor v = (x₁, y₁) dan w = (x₂, y₂).
+- Hitung T(v + w):
+  T(v + w) = T((x₁ + x₂, y₁ + y₂))
+  = A * [(x₁ + x₂), (y₁ + y₂)]
 
-\[
-A = \begin{bmatrix}
-\cos \theta & -\sin \theta \\
-\sin \theta & \cos \theta
-\end{bmatrix}
-\]
+- Hitung T(v) + T(w):
+  T(v) = A * [(x₁), (y₁)]
+  T(w) = A * [(x₂), (y₂)]
+  T(v) + T(w) = A * [(x₁), (y₁)] + A * [(x₂), (y₂)]
 
-### **1. Tambahan Vektor**
-Misalkan \( u = \begin{bmatrix} x_1 \\ y_1 \end{bmatrix} \) dan \( v = \begin{bmatrix} x_2 \\ y_2 \end{bmatrix} \).
+- Dengan sifat distribusi matriks, kedua hasil di atas akan sama, maka T(v + w) = T(v) + T(w).
 
-- Hitung \( T(u + v) \):
+**Langkah 2: Verifikasi Skalar**
+- Ambil vektor v = (x, y) dan skalar c.
+- Hitung T(cv):
+  T(cv) = T((cx, cy))
+  = A * [(cx), (cy)]
 
-\[
-T(u + v) = T\left(\begin{bmatrix} x_1 + x_2 \\ y_1 + y_2 \end{bmatrix}\right) = A\begin{bmatrix} x_1 + x_2 \\ y_1 + y_2 \end{bmatrix}
-\]
+- Hitung cT(v):
+  T(v) = A * [(x), (y)]
+  cT(v) = c * (A * [(x), (y)])
 
-\[
-= A\begin{bmatrix} x_1 \\ y_1 \end{bmatrix} + A\begin{bmatrix} x_2 \\ y_2 \end{bmatrix} = T(u) + T(v)
-\]
+- Dalam hal ini, hasil T(cv) juga akan sama dengan cT(v).
 
-### **2. Homogenitas**
-- Hitung \( T(cu) \):
-
-\[
-T(cu) = T\left(c\begin{bmatrix} x \\ y \end{bmatrix}\right) = A\begin{bmatrix} cx \\ cy \end{bmatrix}
-\]
-
-\[
-= cA\begin{bmatrix} x \\ y \end{bmatrix} = cT(u)
-\]
-
-### **Kesimpulan**
-Karena transformasi ini memenuhi kedua sifat di atas, maka \( T : \mathbb{R}^2 \to \mathbb{R}^2 \) yang didefinisikan oleh matriks \( A \) adalah transformasi linier. 
-
-Silakan upload penjelasan ini ke GitHub Anda!
+### Kesimpulan
+Karena kedua syarat transformasi linier telah terpenuhi, maka transformasi rotasi yang didefinisikan oleh matriks A adalah transformasi linier.
