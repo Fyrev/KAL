@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Selamat Datang di Web KAL Saya &#8212; My sample book</title>
+    <title>1. Tambahan Vektor &#8212; My sample book</title>
   
   
   
@@ -57,10 +57,10 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'buktikan bahwa transformasi linier';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Sistem Persamaan linier" href="Sistem%20Persamaan%20Linier.html" />
+    <link rel="prev" title="Determinan Matriks" href="determinan-matriks.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -123,8 +123,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -143,7 +141,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -174,16 +172,16 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Selamat Datang di Web KAL Saya
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Sistem%20Persamaan%20Linier.html">Sistem Persamaan linier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="determinan-matriks.html">Determinan Matriks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="buktikan%20bahwa%20transformasi%20linier.html"><strong>1. Tambahan Vektor</strong></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>1. Tambahan Vektor</strong></a></li>
 
 
 </ul>
@@ -257,7 +255,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbuktikan bahwa transformasi linier.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -287,7 +285,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/buktikan bahwa transformasi linier.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -358,7 +356,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -369,11 +369,22 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Selamat Datang di Web KAL Saya</h1>
+    <h1>1. Tambahan Vektor</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>1. Tambahan Vektor</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#homogenitas"><strong>2. Homogenitas</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan"><strong>Kesimpulan</strong></a></li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -383,10 +394,48 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="selamat-datang-di-web-kal-saya">
-<h1>Selamat Datang di Web KAL Saya<a class="headerlink" href="#selamat-datang-di-web-kal-saya" title="Link to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
-</div>
+  <p><strong>Transformasi Linier dan Buktinya</strong></p>
+<p>Transformasi linier adalah fungsi yang mengubah satu vektor ke vektor lain dengan memenuhi dua sifat dasar:</p>
+<ol class="arabic simple">
+<li><p><strong>Additivitas</strong>: ( T(u + v) = T(u) + T(v) ) untuk setiap vektor ( u ) dan ( v ).</p></li>
+<li><p><strong>Homogenitas</strong>: ( T(cu) = cT(u) ) untuk setiap skalar ( c ) dan vektor ( u ).</p></li>
+</ol>
+<p>Dalam konteks rotasi di ( \mathbb{R}^2 ), kita menggunakan matriks:</p>
+<p>[
+A = \begin{bmatrix}
+\cos \theta &amp; -\sin \theta \
+\sin \theta &amp; \cos \theta
+\end{bmatrix}
+]</p>
+<section id="tambahan-vektor">
+<h1><strong>1. Tambahan Vektor</strong><a class="headerlink" href="#tambahan-vektor" title="Link to this heading">#</a></h1>
+<p>Misalkan ( u = \begin{bmatrix} x_1 \ y_1 \end{bmatrix} ) dan ( v = \begin{bmatrix} x_2 \ y_2 \end{bmatrix} ).</p>
+<ul class="simple">
+<li><p>Hitung ( T(u + v) ):</p></li>
+</ul>
+<p>[
+T(u + v) = T\left(\begin{bmatrix} x_1 + x_2 \ y_1 + y_2 \end{bmatrix}\right) = A\begin{bmatrix} x_1 + x_2 \ y_1 + y_2 \end{bmatrix}
+]</p>
+<p>[
+= A\begin{bmatrix} x_1 \ y_1 \end{bmatrix} + A\begin{bmatrix} x_2 \ y_2 \end{bmatrix} = T(u) + T(v)
+]</p>
+</section>
+<section id="homogenitas">
+<h1><strong>2. Homogenitas</strong><a class="headerlink" href="#homogenitas" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Hitung ( T(cu) ):</p></li>
+</ul>
+<p>[
+T(cu) = T\left(c\begin{bmatrix} x \ y \end{bmatrix}\right) = A\begin{bmatrix} cx \ cy \end{bmatrix}
+]</p>
+<p>[
+= cA\begin{bmatrix} x \ y \end{bmatrix} = cT(u)
+]</p>
+</section>
+<section id="kesimpulan">
+<h1><strong>Kesimpulan</strong><a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h1>
+<p>Karena transformasi ini memenuhi kedua sifat di atas, maka ( T : \mathbb{R}^2 \to \mathbb{R}^2 ) yang didefinisikan oleh matriks ( A ) adalah transformasi linier.</p>
+<p>Silakan upload penjelasan ini ke GitHub Anda!</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -419,14 +468,14 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="Sistem%20Persamaan%20Linier.html"
-       title="next page">
+    <a class="left-prev"
+       href="determinan-matriks.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Sistem Persamaan linier</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Determinan Matriks</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -434,6 +483,24 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>1. Tambahan Vektor</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#homogenitas"><strong>2. Homogenitas</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan"><strong>Kesimpulan</strong></a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
