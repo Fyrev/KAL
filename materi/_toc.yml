@@ -6,4 +6,5 @@ root: intro
 chapters:
 - file: Sistem Persamaan Linier
 - file: determinan-matriks
-
+- file : buktikan bahwa transformasi linier
+- file : transformasi linier
