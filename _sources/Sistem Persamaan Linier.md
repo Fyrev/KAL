@@ -36,6 +36,245 @@ Sistem tidak memiliki solusi karena terdapat kontradiksi dalam persamaan.
 
 ## Solusi Persamaan Linier
 
+### penyelesaian sistem persamaan linier 
+
+Mari kita selesaikan setiap sistem persamaan linier menggunakan **Operasi Baris Elementer (OBE)** dan periksa apakah sistem memiliki solusi unik, tak hingga solusi, atau tidak ada solusi.
+
+---
+
+### **Soal 1:**
+
+  x1 + 2x2 +3x3 = 6
+​
+ 
+  2x1 + 4x2 + 6x3 = 12
+​
+ 
+  x3 − x2 = 2
+​
+ 
+​
+  
+
+​
+
+
+**Matriks Augmented:**
+
+[
+1  2  3  |6 
+2  4  6  |12 
+0  -1  1  |2
+]
+
+- Baris 2 dikurangi 2 kali Baris 1:
+
+[
+1  2  3  |6 
+0  0  0  |0 
+0  -1  1  |2
+]
+
+- Karena Baris 2 semuanya nol (tidak berkontribusi ke solusi), kita eliminasi:
+
+[
+1  2  3  |6 
+0  -1  1  |2
+]
+
+- Substitusi dari baris terakhir:  x3 = x2 + 2 
+- Substitusi ke baris pertama:
+
+
+x1 + 2x2 + 3(x2 + 2) = 6
+
+
+
+x1 + 2x2 + 3x2 + 6 = 6
+
+
+
+x1 + 5x2 = 0
+
+
+**Solusi Umum:**
+
+x1 = -5t,  x2 = t,  x3 = t + 2
+
+
+**Kesimpulan:** Tak hingga solusi (satu variabel bebas,  t ).
+
+---
+
+### **Soal 2:**
+
+[
+x1 + x2 + x3 = 3 
+2x1 + x3 = 5 
+x1 + 2x2 = 3
+]
+
+**Matriks Augmented:**
+
+[
+1  1  1  |3 
+2  0  1  |5 
+1  2  0  |3
+]
+
+- Baris 2 dikurangi 2 kali Baris 1:
+
+[
+1  1  1  |3 
+0  -2  -1  |-1 
+1  2  0  |3
+]
+
+- Baris 3 dikurangi Baris 1:
+[
+1  1  1  |3 
+0  -2  -1  |-1 
+0  1  -1  |0
+]
+
+- Baris 3 ditambah  1/2  Baris 2:
+
+[
+1  1  1  |3 
+0  -2  -1  |-1 
+0  0  3/2 & |-1/2
+]
+
+- Dari baris terakhir,  x3 = 1/3
+- Substitusi ke baris 2:
+
+-2x2 - x3 = -1
+
+
+
+-2x2 - 1/3 = -1
+
+
+
+-2x2 = -2/3
+
+
+
+x2 = 1/3
+
+
+- Substitusi ke baris pertama:
+
+x1 + 1/3 + 1/3 = 3
+
+
+
+x1 = 3 - 2/3 = 7/3
+
+
+**Solusi Unik:**  x1 = 7/3, x2 = 1/3, x3 = 1/3 .
+
+---
+
+### **Soal 3:**
+
+[
+2x1 + 2x2 = 4 
+x1 + x2 = 2
+]
+
+**Matriks Augmented:**
+
+[
+2  2  |4 
+1  1  |2
+]
+
+- Baris 1 dikurangi 2 kali Baris 2:
+[
+1  1  |2 
+0  0  |0
+]
+
+-  x1 + x2 = 2 > x2 = t, x1 = 2 - t 
+
+**Solusi Umum:**  x1 = 2 - t, x2 = t  (tak hingga solusi).
+
+---
+
+### **Soal 4:**
+
+[
+x1 + x2 = 5 
+x1 + x3 = 6
+]
+
+**Matriks Augmented:**
+[
+
+1  1  0  |5 
+1  0  1  |6
+]
+
+- Baris 2 dikurangi Baris 1:
+
+[
+1  1  0  |5 
+0 -1  1  |1
+]
+
+- Dari baris kedua,  x3 = x2 + 1 
+- Dari baris pertama,  x1 = 5 - x2 
+
+**Solusi Umum:**  x1 = 5 - t, x2 = t, x3 = t + 1  (tak hingga solusi).
+
+---
+
+ **Kesimpulan:**
+| Soal | Jenis Solusi |
+|------|-------------|
+| Soal 1 | Tak hingga solusi |
+| Soal 2 | Solusi unik |
+| Soal 3 | Tak hingga solusi |
+| Soal 4 | Tak hingga solusi |
+
+
+
+### operasi baris elementer 
+
+1. Jenis-Jenis Operasi Baris Elementer
+OBE terdiri dari tiga jenis operasi dasar:
+
+Pertukaran Baris (Ri ↔ Rj)
+
+Menukar posisi dua baris dalam matriks.
+
+Contoh: Tukar Baris 1 dan Baris 2
+
+
+R1↔R2
+
+Perkalian Baris dengan Skalar (k ≠ 0)
+
+Mengalikan satu baris dengan konstanta tak nol.
+
+Contoh: Kalikan Baris 2 dengan 
+
+ 
+
+𝑅2→1/2𝑅2
+
+​Penjumlahan atau Pengurangan Baris
+
+Menambahkan atau mengurangi kelipatan suatu baris ke baris lain.
+
+Contoh: Baris 2 dikurangi 2 kali Baris 1
+
+𝑅2→𝑅2 − 2𝑅1
+
+
+​
+
 ### Eliminasi
 
 ### Eliminasi Gaus
