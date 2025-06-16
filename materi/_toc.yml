@@ -8,3 +8,6 @@ chapters:
 - file: determinan-matriks
 - file : buktikan bahwa transformasi linier
 - file : transformasi linier
+- file : EigenValue dan EigenVector
+- file : kalisilang
+- file : SVD
